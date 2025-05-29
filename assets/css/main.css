@@ -599,7 +599,7 @@ section,
   content: "";
   position: absolute;
   display: block;
-  width: 50px;
+  width: 100px;
   height: 3px;
   background: var(--accent-color);
   left: 0;
@@ -696,11 +696,13 @@ section,
 .about .content h2 {
   font-weight: 700;
   font-size: 24px;
+  margin-bottom: 25px;
 }
 
 .about .content ul {
   list-style: none;
   padding: 0;
+  
 }
 
 .about .content ul li {
@@ -714,10 +716,21 @@ section,
 }
 
 .about .content ul i {
-  font-size: 16px;
+  font-size: 20px;
   margin-right: 5px;
-  color: var(--accent-color);
+  color: #00f7d3;;
   line-height: 0;
+}
+
+.about .content ul a {
+  color: #18927f;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.about .content ul a:hover {
+  color: #00c4a9; /* можно немного темнее */
+  text-decoration: underline;
 }
 
 /*--------------------------------------------------------------
@@ -756,7 +769,7 @@ section,
 /*--------------------------------------------------------------
 # Skills Section
 --------------------------------------------------------------*/
-.skills .progress {
+/* .skills .progress {
   height: 60px;
   display: block;
   background: none;
@@ -788,7 +801,49 @@ section,
   height: 10px;
   transition: 0.9s;
   background-color: var(--accent-color);
+} */
+
+/* Заголовки категорий */
+.skill-category h3 {
+  font-size: 22px;
+  margin: 5px 0 20px;
+  font-weight: 600;
 }
+
+/* Сетка иконок */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.skills-grid img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.skills-grid img {
+  height: 150px;
+  width: auto;
+  max-height: 150px;
+  object-fit: contain;
+  transition: transform 0.2s ease-in-out;
+}
+
+.skills-grid img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .skills-grid img {
+    height: 60px;
+  }
+}
+
 
 /*--------------------------------------------------------------
 # Resume Section
