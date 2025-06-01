@@ -769,39 +769,6 @@ section,
 /*--------------------------------------------------------------
 # Skills Section
 --------------------------------------------------------------*/
-/* .skills .progress {
-  height: 60px;
-  display: block;
-  background: none;
-  border-radius: 0;
-}
-
-.skills .progress .skill {
-  color: var(--heading-color);
-  padding: 0;
-  margin: 0 0 6px 0;
-  text-transform: uppercase;
-  display: block;
-  font-weight: 600;
-  font-family: var(--heading-font);
-}
-
-.skills .progress .skill .val {
-  float: right;
-  font-style: normal;
-}
-
-.skills .progress-bar-wrap {
-  background: color-mix(in srgb, var(--default-color), transparent 90%);
-  height: 10px;
-}
-
-.skills .progress-bar {
-  width: 1px;
-  height: 10px;
-  transition: 0.9s;
-  background-color: var(--accent-color);
-} */
 
 /* Заголовки категорий */
 .skill-category h3 {
@@ -1146,6 +1113,12 @@ section,
 /*--------------------------------------------------------------
 # Contact Section
 --------------------------------------------------------------*/
+
+.contact-section-white {
+  background: #fff !important;
+}
+
+
 .contact .info-wrap {
   background-color: var(--surface-color);
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
@@ -1189,10 +1162,32 @@ section,
   font-size: 14px;
 }
 
-.contact .info-item:hover i {
-  background: var(--accent-color);
+/* .contact .info-item:hover i {
+  background: var(--accent-color) ;
   color: var(--contrast-color);
+} */
+
+.info-item:hover i {
+  background: #00ffc3 !important;   /* Ярко-бирюзовый */
+  color: #fff !important;           /* Белая иконка внутри */
+  transition: all 0.3s;
 }
+
+.info-item i {
+  transition: all 0.3s;
+}
+
+.contact-link {
+  color: #18b99b; /* или твой --accent-color */
+  font-weight: 500;
+  text-decoration: underline;
+  transition: color 0.2s;
+  font-size: medium;
+}
+.contact-link:hover {
+  color: #00ffc3;
+}
+
 
 .contact .php-email-form {
   background-color: var(--surface-color);
